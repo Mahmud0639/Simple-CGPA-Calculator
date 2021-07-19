@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Calculator</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename='css/app.css') }}"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <h2>CGPA Calculator App</h2>
+      <small>Mahmud Islam</small>
+    </div>
+
+    <!-- Form -->
+    <div class="container">
+      <form action="/calculate" method="POST">
+        <div class="header">
+      <h3>First Semester</h3>
+      
+    </div>
+        <div class="form-group">
+          <label for="Number One">Enter 1st Semester Grade Point: (between 1 to 4) </label>
+          <input type="text" placeholder="Grade" name="num1" />
+        </div>
+
+        <div class="form-group">
+          <label for="Number Two">Enter 2nd Semester Grade Point: (between 1 to 4) </label>
+          <input type="text" placeholder="Grade" name="num2" />
+        </div>
+        <div class="form-group">
+          <label for="Number Three">Enter 3rd Semester Grade Point: (between 1 to 4) </label>
+          <input type="text" placeholder="Grade" name="num3" />
+        </div>
+        <div class="form-group">
+          <label for="Number Four">Enter 4th Semester Grade Point: (between 1 to 4) </label>
+          <input type="text" placeholder="Grade" name="num4" />
+        </div>
+      
+        
+        <div class="header">
+      <h3>Second Semester</h3>
+      
+    </div>
+         
+            <div class="form-group">
+          <label for="Number Five">Enter 5th Semester Grade Point: (between 1 to 4) </label>
+          <input type="text" placeholder="Grade" name="num5" />
+        </div>
+
+        <div class="form-group">
+          <label for="Number Six">Enter 6th Semester Grade Point: (between 1 to 4) </label>
+          <input type="text" placeholder="Grade" name="num6" />
+        </div>
+        <div class="form-group">
+          <label for="Number Seven">Enter 7th Semester Grade Point: (between 1 to 4) </label>
+          <input type="text" placeholder="Grade" name="num7" />
+        </div>
+        <div class="form-group">
+          <label for="Number Eight">Enter 8th Semester Grade Point: (between 1 to 4) </label>
+          <input type="text" placeholder="Grade" name="num8" />
+        </div>
+           
+        <div class="header">
+      <h3>Third Semester</h3>
+      
+    </div>
+            <div class="form-group">
+          <label for="Number Nine">Enter 9th Semester Grade Point: (between 1 to 4) </label>
+          <input type="text" placeholder="Grade" name="num9" />
+        </div>
+
+        <div class="form-group">
+          <label for="Number Ten">Enter 10th Semester Grade Point: (between 1 to 4) </label>
+          <input type="text" placeholder="Grade" name="num10" />
+        </div>
+        <div class="form-group">
+          <label for="Number Eleven">Enter 11th Semester Grade Point: (between 1 to 4) </label>
+          <input type="text" placeholder="Grade" name="num11" />
+        </div>
+        <div class="form-group">
+          <label for="Number Twelve">Enter 12th Semester Grading Point: (between 1 to 4) </label>
+          <input type="text" placeholder="Grade" name="num12" />
+        </div>
+
+        <div class="form-group">
+          <label for="Operation">Mode</label>
+          <select name="operation">
+            <option value="add">On</option>
+          </select>
+          <input type="submit" value="Calculate Your CGPA" id="calc_btn" class="btn" />
+        <br />
+         <div class="alert">
+          {{ result }}
+        </div>
+        </div>
+         </div>
+       
+      </form>
+    </div>
+  </body>
+</html>
